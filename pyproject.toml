@@ -1,0 +1,28 @@
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["D100", "D101", "D102", "D103", "F", "I"]
+
+[tool.basedpyright]
+include = ["*.py", "utilities"]
+venvPath = "."
+venv = ".conda"
+reportUnnecessaryCast = "error"
+failOnWarnings = false
+
+[tool.vulture]
+# vulture doesn't expand globs, so a new top-level module must be added here
+paths = [
+  "main.py",
+  "plants.py",
+  "footprints.py",
+  "disaggregation.py",
+  "evaluation.py",
+  "utilities",
+]
+
+[tool.codespell]
+# te is the thermoelectric product code, and cu is the consumptive use column of the USGS estimates
+ignore-words-list = "te,cu"
