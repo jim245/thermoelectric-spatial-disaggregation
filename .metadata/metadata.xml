@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Validate https://www1.usgs.gov/mp/index.php
+  Search TODO before submitting.
+-->
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <!-- TODO: confirm the authors of the thermoelectric release -->
+        <origin>Eric C. Sjöstedt</origin>
+        <origin>Jade I. Meskill</origin>
+        <origin>Haley E. Berger</origin>
+        <origin>Laura Guerrero</origin>
+        <origin>Aiden Harper</origin>
+        <origin>Haley R. Kloss</origin>
+        <origin>Richard R. Rushforth</origin>
+        <origin>Jay Diffendorfer</origin>
+        <origin>Kenneth Bagstad</origin>
+        <origin>Benjamin R. Ruddell</origin>
+        <!-- TODO: replace with actual publication date once assigned -->
+        <pubdate>Unknown</pubdate>
+        <title>Spatially disaggregated 1 km rasters of monthly and annual thermoelectric power plant water consumption and withdrawal estimates for the conterminous United States, 2008 to 2020.</title>
+        <geoform>raster digital data</geoform>
+        <pubinfo>
+          <pubplace>Denver, CO</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>TODO - published DOI link</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This data release provides gridded estimates of the monthly and annual water consumption and withdrawal of thermoelectric power plants in the conterminous United States, 2008 to 2020. The grid has 1000-meter cells.
+
+The estimates were produced by a footprint-based method. The footprint of a plant is the area covered by its OpenStreetMap features, obtained through the Overpass API. Plant codes and point locations, mainly from the 2020 EIA-860 form, were used to find the footprints. The reported monthly water use of each plant was apportioned to the 1000-meter cells, in proportion to the footprint area in each cell. The annual estimates are the day-weighted mean of the monthly estimates.
+
+The grid, coordinate reference system, and HUC-2-derived land extent are the same as those of the HUC-12-based disaggregation of irrigation and public-supply water use. Thus the two products align to identical grid cells.</abstract>
+      <purpose>To provide fine-resolution (1000-meter) gridded estimates of thermoelectric power plant water use across the conterminous United States. These estimates support analyses that require water use information on a grid, instead of at plant point locations. The plant-level water use statistics were spatially disaggregated with a plant-footprint proportional allocation approach.</purpose>
+      <supplinf>This data release provides monthly and annual GeoTIFFs, with these names:
+  &lt;year&gt;-&lt;month&gt;-consumption.tif
+  &lt;year&gt;-&lt;month&gt;-withdrawal.tif
+  &lt;year&gt;-annual-consumption.tif
+  &lt;year&gt;-annual-withdrawal.tif
+&lt;month&gt; is the two-digit calendar month (01-12), and &lt;year&gt; ranges from 2008 to 2020.
+
+Every raster in this data release has a single band ("Value"). The band reports water use in million gallons per day (MGD) per 1000-meter grid cell. The rasters are 64-bit floating point, with lossless DEFLATE compression. NaN is the nodata value. The entity and attribute overview lists the cells that are NaN. See the accompanying data dictionary (data_dictionary.csv) for the field descriptions and value ranges.
+
+Ancillary data: OpenStreetMap plant footprints (obtained through the Overpass API, as the OpenStreetMap data were on 2026-03-25) and power plant point locations. The method uses them directly for proportional allocation within each plant, not as predictors.
+
+Source data:
+  published_monthly_thermoelectric_water_use_estimates_2008-2020.csv (monthly power-plant water consumption and withdrawal). Source: Galanter, A.E., Gorman Sanisaca, L.E., Skinner, K.D., Harris, M.A., Diehl, T.H., Chamberlin, C.A., Mccarthy, B.A., Halper, A.S., Niswonger, R., Stewart, J.S., Markstrom, S.L., Embry, I.A., and Worland, S.C., 2023, Thermoelectric-power water use reanalysis for the 2008-2020 period by power plant, month, and year for the conterminous United States: U.S. Geological Survey data release, https://doi.org/10.5066/P9ZE2FVM. That release builds on condenser-duty estimates from a second release: Gorman Sanisaca, L.E., Galanter, A.E., Skinner, K.D., Harris, M.A., Diehl, T.H., Halper, A.S., Mohs, T.G., Roland, V.L., Stewart, J.S., and Niswonger, R., 2023, Thermoelectric-power condenser duty estimates by month and cooling type for use to calculate water use by power plant for the 2008-2020 reanalysis period for the conterminous United States: U.S. Geological Survey data release, https://doi.org/10.5066/P9XG876W.
+  te_plants.csv (thermoelectric plant codes and locations, https://www.sciencebase.gov/catalog/item/63adc826d34e92aad3ca5af4).
+  2___Plant_Y2020.xlsx (2020 EIA-860 plant codes and locations).
+  Watershed Boundary Dataset (WBD) HU-2 boundaries of regions 1 to 18 (template grid).
+
+https://github.com/jim245/thermoelectric-spatial-disaggregation
+      </supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20080101</begdate>
+          <enddate>20201231</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>Ground Condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None Planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-129.5158</westbc>
+        <eastbc>-62.9930</eastbc>
+        <northbc>54.7122</northbc>
+        <southbc>22.3254</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>water use</themekey>
+        <themekey>water withdrawals</themekey>
+        <themekey>consumptive use</themekey>
+        <themekey>thermoelectric power</themekey>
+        <themekey>power plant cooling water</themekey>
+        <themekey>power plant footprints</themekey>
+        <themekey>OpenStreetMap</themekey>
+        <themekey>spatial disaggregation</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>TODO - "USGS:abcdef1234567890"</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>United States</placekey>
+        <placekey>Conterminous United States (CONUS)</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Benjamin Ruddell</cntper>
+          <cntorg>Northern Arizona University</cntorg>
+        </cntperp>
+        <cntpos>Professor</cntpos>
+        <cntaddr>
+          <addrtype>physical</addrtype>
+          <address>1100 S. Beaver St</address>
+          <city>Flagstaff</city>
+          <state>AZ</state>
+          <postal>86011</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>n/a</cntvoice>
+        <cntemail>Benjamin.Ruddell@nau.edu</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <native>n/a</native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>The method allocates the reported total of each plant to the cells that its footprint intersects. Thus the cell sums of each plant equal the reported plant total. The exception is the part of a footprint outside the land cells of the template grid, which gets no water. Two of the 1,341 plants have such a part, at most 0.45 percent of the footprint area. The water in these parts is at most 0.0004 percent of the national monthly total in any month from 2008 to 2020. Over all plant-months, it is 0.00006 percent of the consumption and 0.000003 percent of the withdrawal. No independent accuracy assessment was performed.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>Complete</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>HUC boundary acquisition and template raster generation: Watershed Boundary Dataset (WBD) HU-2 boundaries of regions 1 to 18 were obtained. The WBD files were downloaded on 2026-09-21. The source supplies only the latest WBD release. The boundaries were reprojected to an Albers Equal Area projection (EPSG:5070). A 1000-meter template raster was generated from their combined extent. A cell is a land cell if it touches a HU-2 region. This template defines the pixel grid, transform, coordinate reference system, and land cells of every raster. It is identical to the template of the HUC-12-based disaggregation of irrigation and public-supply water use.</procdesc>
+        <procdate>20261116</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Thermoelectric power plant geometry acquisition: The point location of each plant was taken from the 2020 EIA-860 form. Plants with no location in that form (for example, plants retired before 2020) used the location in te_plants.csv. The locations of four plants were corrected by hand. The Overpass API supplied the OpenStreetMap features, as they were on 2026-03-25. For most plants, the footprint is the union of the OpenStreetMap features that have the plant's EIA code in their ref:US:EIA tag. For a hand-selected list of plants, the footprint is instead the union of the power-plant features within a plant-specific radius of the point location. For 39 plants on this list, no search was done. Where no footprint was found or no search was done, a circle centered on the plant's point location was used. Its area is the median area of the footprints that were found. The query run did not include 112 plants. Each of these plants also got a circle, whose area is the median area of the footprints of the query run, circles included.</procdesc>
+        <procdate>20260325</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Thermoelectric water use statistics preparation: The reported monthly power-plant water consumption and withdrawal estimates are in million gallons per day (see supplinf). The estimates of the plants in te_plants.csv were joined to the plant footprints by EIA plant code.</procdesc>
+        <procdate>20261116</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Thermoelectric footprint disaggregation: This step used each power plant, month, and year with nonzero reported consumption or withdrawal. The reported value was apportioned to template grid cells, in proportion to the fraction of the total footprint area of the plant in each cell. Thus the sum across all intersected cells equals the reported plant total for that month. The part of a footprint outside the land cells of the template grid gets no water. Land cells that intersect no plant footprint were assigned a value of 0. Cells outside the land cells were held at nodata (NaN).</procdesc>
+        <procdate>20261116</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Thermoelectric monthly-to-annual aggregation: Annual consumption and withdrawal rasters were produced for each year as the cell-by-cell day-weighted mean of the corresponding 12 monthly rasters. Thus the annual values are also in MGD.</procdesc>
+        <procdate>20261116</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+      <rowcount>3296</rowcount>
+      <colcount>4689</colcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>Albers_Conical_Equal_Area</mapprojn>
+          <albers>
+            <stdparll>29.5</stdparll>
+            <stdparll>45.5</stdparll>
+            <longcm>-96.0</longcm>
+            <latprjo>23.0</latprjo>
+            <feast>0.0</feast>
+            <fnorth>0.0</fnorth>
+          </albers>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>1000</absres>
+            <ordres>1000</ordres>
+          </coordrep>
+          <plandu>meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>North American Datum of 1983</horizdn>
+        <ellips>Geographic Reference System 80</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>&lt;year&gt;-&lt;month&gt;-consumption.tif</enttypl>
+        <enttypd>Gridded estimate of thermoelectric power plant water consumption for &lt;month&gt; (01-12) of &lt;year&gt; (2008-2020), spatially disaggregated to a 1000-meter grid using plant-footprint proportional allocation.</enttypd>
+        <enttypds>USGS Derived</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Estimated thermoelectric power plant water consumption per grid cell.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0000</rdommin>
+            <rdommax>52.5083</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>&lt;year&gt;-&lt;month&gt;-withdrawal.tif</enttypl>
+        <enttypd>Gridded estimate of thermoelectric power plant water withdrawal for &lt;month&gt; (01-12) of &lt;year&gt; (2008-2020), spatially disaggregated to a 1000-meter grid using plant-footprint proportional allocation.</enttypd>
+        <enttypds>USGS Derived</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Estimated thermoelectric power plant water withdrawal per grid cell.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0000</rdommin>
+            <rdommax>2313.5761</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>&lt;year&gt;-annual-consumption.tif</enttypl>
+        <enttypd>Gridded estimate of annual thermoelectric power plant water consumption for &lt;year&gt; (2008-2020), the day-weighted mean of the 12 corresponding monthly rasters.</enttypd>
+        <enttypds>USGS Derived</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Estimated annual thermoelectric power plant water consumption per grid cell.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0000</rdommin>
+            <rdommax>33.2628</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>&lt;year&gt;-annual-withdrawal.tif</enttypl>
+        <enttypd>Gridded estimate of annual thermoelectric power plant water withdrawal for &lt;year&gt; (2008-2020), the day-weighted mean of the 12 corresponding monthly rasters.</enttypd>
+        <enttypds>USGS Derived</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>Estimated annual thermoelectric power plant water withdrawal per grid cell.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0000</rdommin>
+            <rdommax>2137.4491</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Units for all layers are million gallons per day (MGD) per 1000-meter grid cell. NaN is the nodata value. NaN marks the cells outside the land cells of the template grid, which are the cells that touch no WBD HU-2 region 1 to 18. All other cells have a value, which is 0 where no plant footprint intersects the cell. See data_dictionary.csv for the machine-readable version of this table.</eaover>
+      <eadetcit>n/a</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>U.S. Geological Survey ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey ScienceBase</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Any use of trade, product or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Geological Survey.
+Although this information product, for the most part, is in the public domain, it also contains copyrighted materials as noted in the text. Permission to reproduce copyrighted items for other than personal use must be secured from the copyright owner.
+This database has been approved for release and publication by the Director of the USGS. Although this database has been subjected to rigorous review and is substantially complete, the USGS reserves the right to revise the data pursuant to further analysis and review. Furthermore, it is released on condition that neither the USGS nor the United States Government may be held liable for any damages resulting from its authorized or unauthorized use.
+Although these data have been processed successfully on a computer system at the U.S. Geological Survey, no warranty expressed or implied is made regarding the display or utility of the data on any other system, or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. The U.S. Geological Survey shall not be held liable for improper or incorrect use of the data described and/or contained herein.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>GeoTIFF (.tif)</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>TODO — DOI link</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None. No fees are applicable for obtaining the data set.</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20261119</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Benjamin Ruddell</cntper>
+          <cntorg>Northern Arizona University</cntorg>
+        </cntperp>
+        <cntpos>Professor</cntpos>
+        <cntaddr>
+          <addrtype>physical</addrtype>
+          <address>1100 S. Beaver St</address>
+          <city>Flagstaff</city>
+          <state>AZ</state>
+          <postal>86011</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>n/a</cntvoice>
+        <cntemail>Benjamin.Ruddell@nau.edu</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
