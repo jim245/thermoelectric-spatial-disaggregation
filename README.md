@@ -63,7 +63,7 @@ Paths are relative to `input/`.
 
 [^1]: The reanalysis builds on the [condenser duty estimates](https://www.usgs.gov/data/thermoelectric-power-condenser-duty-estimates-month-and-cooling-type-use-calculate-water-use) (Sanisaca, 2023).
 
-The WBD HU-2 shapefiles are at `https://prd-tnm.s3.amazonaws.com/StagedProducts/Hydrography/WBD/HU2/Shape/WBD_{huc2}_HU2_Shape.zip`, with a 2-digit `huc2`. Extract `Shape/WBDHU2.*` to `HUC/{huc2}/`.
+The WBD HU-2 shapefiles are at `https://prd-tnm.s3.amazonaws.com/StagedProducts/Hydrography/WBD/HU2/Shape/WBD_{region}_HU2_Shape.zip`, where `region` is the region number with 2 digits (`01` to `18`). Extract `Shape/WBDHU2.*` to `HUC/{huc2}/`, where `huc2` is the region number with no leading zero (`1` to `18`).
 
 # License
 
